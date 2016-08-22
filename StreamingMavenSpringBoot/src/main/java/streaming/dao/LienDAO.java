@@ -19,4 +19,5 @@ public interface LienDAO extends CrudRepository<Lien, Long>{
     public List<Lien> findAllByFilm(String titre);
     
     //16. Tous les liens d'un numéro d'épisode d'un numéro de saison d'une série donnée
+    public List<Lien> findAllByEpisode_NumEpisode_AndEpisode_Saison_NumSaison_AndEpisode_Saison_SerieId (int numEpisode, int numSaison, long serieId);
 }
