@@ -14,4 +14,6 @@ import streaming.entity.Serie;
  */
 public interface SerieDAO extends CrudRepository<Serie, Long>{
     
+    //14. Toutes les saisons d'une série donnée classées par ordre
+    
 }

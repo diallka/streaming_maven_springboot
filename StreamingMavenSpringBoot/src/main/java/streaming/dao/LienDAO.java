@@ -5,6 +5,7 @@
  */
 package streaming.dao;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import streaming.entity.Lien;
 
@@ -14,4 +15,8 @@ import streaming.entity.Lien;
  */
 public interface LienDAO extends CrudRepository<Lien, Long>{
     
+        //13. Tous les liens d'un film donné
+    public List<Lien> findAllByFilm(String titre);
+    
+    //16. Tous les liens d'un numéro d'épisode d'un numéro de saison d'une série donnée
 }

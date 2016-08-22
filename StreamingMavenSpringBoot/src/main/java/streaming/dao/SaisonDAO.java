@@ -14,4 +14,5 @@ import streaming.entity.Saison;
  */
 public interface SaisonDAO extends CrudRepository<Saison, Long>{
     
+    //15. Tous les épisodes d'une saison donnée d'une série donnée, classés par ordre
 }
