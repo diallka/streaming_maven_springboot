@@ -24,7 +24,7 @@ import streaming.entity.Film;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes=SpringConfig.class)
-public class FilmDAOTest {
+public class Tests {
     
 //    @Autowired
 //    private FilmDAO dao;
