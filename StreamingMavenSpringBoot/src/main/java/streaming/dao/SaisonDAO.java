@@ -5,6 +5,7 @@
  */
 package streaming.dao;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import streaming.entity.Saison;
 
@@ -14,5 +15,6 @@ import streaming.entity.Saison;
  */
 public interface SaisonDAO extends CrudRepository<Saison, Long>{
     
-    //15. Tous les épisodes d'une saison donnée d'une série donnée, classés par ordre
+  //14. Toutes les saisons d'une série donnée classées par ordre
+    public List<Saison>findAllBySerieTitre(String titre);
 }

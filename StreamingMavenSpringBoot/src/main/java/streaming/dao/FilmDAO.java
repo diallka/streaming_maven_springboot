@@ -43,5 +43,10 @@ public interface FilmDAO extends CrudRepository<Film, Long>{
     //11. Le nombre de films pour un réalisateur donné
     public List<Film> countAllByRealisateurs(String nom, String prenom);
     
+    //12. Les films d'un pays donné, pour un genre donné, un réalisateur donné et un acteur donné
+    
+    
+    
+    
 
 }

@@ -26,9 +26,9 @@ import streaming.entity.Film;
 @SpringApplicationConfiguration(classes=SpringConfig.class)
 public class Tests {
     
-//    @Autowired
-//    private FilmDAO dao;
-    
+    @Autowired
+    private FilmDAO dao;
+//    
 //    @Before
 //    @Transactional
 //    public void avant (){
@@ -54,6 +54,7 @@ public class Tests {
     
     @Test
     public void test(){
+        System.out.println("<<" + dao.findAllByAnnee(2010).get(0)+ ">>");
   
     }
     
