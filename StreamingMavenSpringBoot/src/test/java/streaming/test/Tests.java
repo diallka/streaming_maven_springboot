@@ -6,28 +6,29 @@
 package streaming.test;
 
 import streaming.spring.SpringConfig;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 import streaming.dao.FilmDAO;
+import streaming.dao.SerieDAO;
 import streaming.entity.Film;
+import streaming.entity.Serie;
 
 /**
  *
  * @author ETY
  */
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes=SpringConfig.class)
+@SpringApplicationConfiguration(classes = SpringConfig.class)
 public class Tests {
-    
+
     @Autowired
-    private FilmDAO dao;
+    private FilmDAO fdao;
+
+    @Autowired
+    private SerieDAO sdao;
 //    
 //    @Before
 //    @Transactional
@@ -51,11 +52,22 @@ public class Tests {
 //        Assert.assertEquals("Les deux tours", two.getTitre());
 //        Assert.assertEquals("Le retour du roi", three.getTitre());
 //    }
-    
+
     @Test
-    public void test(){
-        System.out.println("<<" + dao.findAllByAnnee(2010).get(0)+ ">>");
-  
+    public void testFilm() {
+        //dao.findAll();
+
+        fdao.save(new Film(4L, "Arnaqueurs", "Lebouquet final, Lol ...", 2016, 280));
+
+        //fdao.deleteAll();
     }
-    
+
+    @Test
+    public void testSerie() {
+        //sdao.save(new Serie(1L, "Bureau des légendes", "blabla canal", ));
+        Serie serie = new Serie();
+        serie.setTitre("Bureau des légendes");
+        sdao.save(serie);
+    }
+
 }
